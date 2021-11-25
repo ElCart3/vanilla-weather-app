@@ -31,6 +31,12 @@ li {
   width: 100px;
 }
 
-.temperature strong {
+.current-temp {
   font-size: 50px;
+  font-weight: bold;
+}
+
+.units {
+  position: relative;
+  top: -25px;
 }
