@@ -12,13 +12,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="wrapper">
         <div class="weather-app">
-          <div class="date-time">Thursday, 15:00</div>
-          <h1>BRISTOL</h1>
+          <div id="date-time"></div>
+          <h1 id="city"></h1>
           <div class="row">
             <div class="col-6">
               <div class="d-flex temperature align-items-center">
@@ -28,7 +29,7 @@
                   class="float-left"
                 />
                 <div class="float-left">
-                  <span class="current-temp">16</span>
+                  <span class="current-temp" id="temperature"></span>
                   <span class="units"> ℃|℉ </span>
                 </div>
               </div>
@@ -36,10 +37,12 @@
             <div class="col-4 offset-2">
               <div class="details">
                 <ul>
-                  <li><strong>Cloudy</strong></li>
-                  <li>Feels like:</li>
-                  <li>Wind speed:</li>
-                  <li>Humidity:</li>
+                  <li>
+                    <strong class="description" id="description"></strong>
+                  </li>
+                  <li>Feels like: <span id="feels-like"></span></li>
+                  <li>Wind speed: <span id="wind"></span> km/h</li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
                 </ul>
               </div>
             </div>

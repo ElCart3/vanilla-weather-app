@@ -40,3 +40,7 @@ li {
   position: relative;
   top: -25px;
 }
+
+.description {
+  text-transform: capitalize;
+}
