@@ -1,6 +1,21 @@
+body {
+  font-family: "Kanit", sans-serif;
+  color: #323643;
+  background: #93deff;
+}
+
 h1 {
   text-align: center;
   font-size: 50px;
+}
+
+.form-search,
+.form-submit {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #606470;
+  border-radius: 10px;
+  background: #ffffff;
 }
 
 ul {
@@ -17,13 +32,17 @@ li {
   margin: 30px auto;
 }
 
+.weather-app {
+  background: #beebff;
+}
+
 .date-time {
   margin: 5px;
 }
 
 .weather-app {
   padding: 20px;
-  border: 1px solid rgba(0, 0, 0);
+  border: 2px solid #beebff;
   border-radius: 30px;
 }
 
@@ -37,7 +56,7 @@ li {
 }
 
 .weather-temperature .active {
-  color: black;
+  color: #323643;
   font-weight: bold;
   cursor: default;
   text-decoration: none;
