@@ -38,11 +38,14 @@
           <h1 id="city"></h1>
           <div class="row">
             <div class="col-6">
-              <div class="d-flex temperature align-items-center">
+              <div class="d-flex weather-temperature align-items-center">
                 <img src="" alt="" id="icon" class="float-left" />
                 <div class="float-left">
                   <span class="current-temp" id="temperature"></span>
-                  <span class="units"> ℃|℉ </span>
+                  <span class="units"
+                    ><a href="#" id="celsius-link" class="active">℃</a> |
+                    <a href="#" id="fahrenheit-link" class="active">℉</a>
+                  </span>
                 </div>
               </div>
             </div>

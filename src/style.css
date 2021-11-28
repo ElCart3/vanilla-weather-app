@@ -27,13 +27,24 @@ li {
   border-radius: 30px;
 }
 
-.temperature img {
+.weather-temperature img {
   width: 100px;
 }
 
 .current-temp {
   font-size: 50px;
   font-weight: bold;
+}
+
+.weather-temperature .active {
+  color: black;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .units {
