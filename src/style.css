@@ -1,5 +1,5 @@
 body {
-  font-family: "Kanit", sans-serif;
+  font-family: "Montagu Slab", serif;
   color: #323643;
   background: #93deff;
 }
@@ -73,4 +73,30 @@ li {
 
 .description {
   text-transform: capitalize;
+}
+
+.weather-forecast {
+  text-align: center;
+  border: 2px solid #606470;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.forecast-day {
+  font-weight: bold;
+}
+
+.weather-forecast img {
+  width: 52px;
+}
+
+.forecast-temperature-max {
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.forecast-temperature-min {
+  font-weight: 500;
+  margin-left: 3px;
 }

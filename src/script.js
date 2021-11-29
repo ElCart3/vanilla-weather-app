@@ -31,7 +31,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date-time");
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemperature = response.data.main.temp;
 
