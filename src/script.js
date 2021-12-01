@@ -23,6 +23,27 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+        <div class="forecast-day">${day}</div>
+        <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" />
+        <div class="forecast-temperature">
+          <span class="forecast-temperature-max">10°</span>
+          <span class="forecast-temperature-min">2°</span>
+        </div>
+      </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
@@ -94,3 +115,5 @@ celsiusLink.classList.add("active");
 fahrenheitLink.classList.remove("active");
 
 search("Bristol");
+
+displayForecast();
