@@ -42,9 +42,8 @@ function displayForecast(response) {
         forecastHTML +
         `<div class="col">
         <div class="forecast-day">${formatWeekday(forecastDay.dt)}</div>
-        <img src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png" alt="" />
+        <img src=${changeIcon(forecastDay.weather[0].icon)}
+           alt="" />
         <div class="forecast-temperature">
           <span class="forecast-temperature-max">${Math.round(
             forecastDay.temp.max
@@ -85,10 +84,7 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   humidityElement.innerHTML = response.data.main.humidity;
   dateElement.innerHTML = formatDate(response.data.dt);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", changeIcon(response.data.weather[0].icon));
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
@@ -123,6 +119,62 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function changeIcon(icon) {
+  let clearDay = "icons/degry.01d.png";
+  let partCloudDay = "icons/degry.02d.png";
+  let cloud = "icons/degry.03.png";
+  let rain = "icons/degry.10.png";
+  let thunderstorm = "icons/degry.11.png";
+  let snow = "icons/degry.13.png";
+  let clearNight = "icons/degry.01n.png";
+  let partCloudNight = "icons/degry.02n.png";
+  let fog = "icons/degry.50.png";
+
+  if (icon === "01d") {
+    return clearDay;
+  } else if (icon === "01n") {
+    return clearNight;
+  } else if (icon === "02d") {
+    return partCloudDay;
+  } else if (icon === "02n") {
+    return partCloudNight;
+  } else if (
+    icon === "03d" ||
+    icon === "04d" ||
+    icon === "03n" ||
+    icon === "04n"
+  ) {
+    return cloud;
+  } else if (
+    icon === "09d" ||
+    icon === "10d" ||
+    icon === "09n" ||
+    icon === "10n"
+  ) {
+    return rain;
+  } else if (icon === "11d" || icon === "11n") {
+    return thunderstorm;
+  } else if (icon === "13d" || icon === "13n") {
+    return snow;
+  } else if (icon === "50d") {
+    return fog;
+  } else {
+    return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  }
+}
+
+function wallpaper() {
+  let now = new Date();
+  let hours = now.getHours();
+
+  if (hours > 17) {
+    document.body.style.background =
+      "linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%)";
+    document.body.style.color = "#e7eaf6";
+  }
+}
+wallpaper();
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

@@ -1,12 +1,17 @@
 body {
   font-family: "Montagu Slab", serif;
-  color: #323643;
-  background: #93deff;
+  color: #3c246b;
+  background: linear-gradient(
+    109.6deg,
+    rgb(220, 196, 252) 11.2%,
+    rgb(150, 199, 253) 100.2%
+  );
+  background-size: 100%;
 }
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .form-search,
@@ -25,38 +30,56 @@ ul {
 
 li {
   list-style: none;
+  line-height: 35px;
+}
+
+.container {
+  max-width: 700px;
 }
 
 .wrapper {
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
 }
 
 .weather-app {
-  background: #beebff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .date-time {
+  font-size: 18px;
   margin: 5px;
 }
 
 .weather-app {
   padding: 20px;
-  border: 2px solid #beebff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 30px;
 }
 
+.middle {
+  margin: 70px 20px;
+}
+
+.weather-temperature {
+  padding: 20px 0px;
+}
+
 .weather-temperature img {
-  width: 100px;
+  width: 120px;
+  display: block;
+  margin: 0 auto;
 }
 
 .current-temp {
-  font-size: 50px;
+  padding: 45px;
+  font-size: 80px;
   font-weight: bold;
 }
 
 .weather-temperature .active {
-  color: #323643;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
   font-weight: bold;
   cursor: default;
   text-decoration: none;
@@ -67,8 +90,14 @@ li {
 }
 
 .units {
+  font-size: 18px;
   position: relative;
-  top: -25px;
+  top: -40px;
+  left: -45px;
+}
+
+.details {
+  font-size: 18px;
 }
 
 .description {
@@ -84,19 +113,23 @@ li {
 }
 
 .forecast-day {
+  font-size: 18px;
   font-weight: bold;
 }
 
 .weather-forecast img {
   width: 52px;
+  margin: 20px;
 }
 
 .forecast-temperature-max {
+  font-size: 18px;
   font-weight: 600;
   margin-right: 3px;
 }
 
 .forecast-temperature-min {
+  font-size: 18px;
   font-weight: 500;
   margin-left: 3px;
 }
