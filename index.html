@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -44,12 +44,9 @@
           <h1 id="city"></h1>
           <div class="row middle">
             <div class="col d-flex weather-temperature align-items-center">
-              <div class="col">
+              <div class="col offset-1">
                 <span class="current-temp" id="temperature"></span>
-                <span class="units"
-                  ><a href="#" id="celsius-link" class="active">℃</a> |
-                  <a href="#" id="fahrenheit-link" class="active">℉</a>
-                </span>
+                <span class="units">°C </span>
               </div>
               <div class="col">
                 <img src="" alt="" id="weather-icon" />
@@ -61,7 +58,7 @@
                   <li>
                     <strong class="description" id="description"></strong>
                   </li>
-                  <li>Feels like: <span id="feels-like"></span></li>
+                  <li>Feels like: <span id="feels-like"></span>°C</li>
                   <li>Wind speed: <span id="wind"></span> km/h</li>
                   <li>Humidity: <span id="humidity"></span>%</li>
                 </ul>
